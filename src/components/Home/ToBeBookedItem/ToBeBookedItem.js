@@ -8,7 +8,7 @@ const ToBeBookedItem = () => {
     const {From, To, price,_id, class:category} = seat;
     const {id} = useParams()
     const handleStatus = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`,{
+        fetch(`https://guarded-bastion-73324.herokuapp.com/updateStatus/${id}`,{
                 method:"PATCH",
                 headers:{"Content-type":"application/json"},
                 body:JSON.stringify({status:"booked"})
@@ -18,7 +18,7 @@ const ToBeBookedItem = () => {
             })
     
     }
-    
+
     const handleBook = () => {
         const bookedItem = {
             class:category,
@@ -30,7 +30,7 @@ const ToBeBookedItem = () => {
         }
 
 
-        fetch(`http://localhost:5000/bookSeat/${_id}`,{
+        fetch(`https://guarded-bastion-73324.herokuapp.com/bookSeat/${_id}`,{
             method:"POST",
            headers:{"Content-Type":"application/json"},
         body:JSON.stringify(bookedItem)
@@ -50,7 +50,7 @@ const ToBeBookedItem = () => {
     }
 
     useEffect(()=> {
-        fetch(`http://localhost:5000/getBookSeat/${id}`).then(res => res.json()).then(data => {
+        fetch(`https://guarded-bastion-73324.herokuapp.com/getBookSeat/${id}`).then(res => res.json()).then(data => {
             setSeat(data[0])
         })
 

@@ -13,7 +13,7 @@ const Cart = ({seat}) => {
         <p>To: {To}</p>
         <p>Price: {price}</p>
         
-        <button className={`${status === "booked"? 'bg-danger':'bg-success'}`} onClick={() => history.push(`/buyTicket/${_id}`)}>Book now</button>
+        <button className={`${status === "booked"? 'bg-danger':'bg-success'}`} onClick={() =>  status === "booked" ? alert('already booked. try another one'): history.push(`/buyTicket/${_id}`)}>Book now</button>
 
   
             

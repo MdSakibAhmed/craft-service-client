@@ -55,7 +55,7 @@
     status:"available"
 
 }]
-  // fetch("http://localhost:5000/addSeats",{
+  // fetch("https://guarded-bastion-73324.herokuapp.com/addSeats",{
     //     method:"POST",
     //     headers:{"Content-Type":"application/json"},
     //     body:JSON.stringify(seats)

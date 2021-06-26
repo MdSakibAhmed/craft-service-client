@@ -11,9 +11,9 @@ const Home = () => {
 
     
 useEffect(()=> {
-    fetch(`http://localhost:5000/seats/Business`).then(res => res.json()).then(data => setSeatsBusiness(data))
+    fetch(`https://guarded-bastion-73324.herokuapp.com/seats/Business`).then(res => res.json()).then(data => setSeatsBusiness(data))
 
-    fetch(`http://localhost:5000/seats/Economy`).then(res => res.json()).then(data => setSeatsEconomy(data))
+    fetch(`https://guarded-bastion-73324.herokuapp.com/seats/Economy`).then(res => res.json()).then(data => setSeatsEconomy(data))
 
     
 
