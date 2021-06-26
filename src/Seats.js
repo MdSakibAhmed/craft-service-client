@@ -1,62 +1,62 @@
  export const seats = [{
     class:"Business",
-    From:"Dhaka",
-    To:"Rangpur",
-    price:200,
+    From:"Comillah",
+    To:"Dhaka",
+    price:150,
     status:"available"
 
 },{
     class:"Business",
     From:"Dhaka",
-    To:"USA",
-    price:800,
+    To:"Zeddah",
+    price:1100,
     status:"available"
 
 },{
     class:"Business",
-    From:"Dhaka",
-    To:"India",
-    price:300,
-    status:"available"
-
-},{
-    class:"Business",
-    From:"Dhaka",
-    To:"Pakistan",
-    price:400,
-    status:"available",
-
-},{
-    class:"Economy",
-    From:"Dhaka",
-    To:"Pakistan",
+    From:"Makkah",
+    To:"Madinah",
     price:250,
     status:"available"
 
 },{
+    class:"Business",
+    From:"UK",
+    To:"Bangladesh",
+    price:900,
+    status:"available",
+
+},{
     class:"Economy",
-    From:"Dhaka",
-    To:"India",
+    From:"Comillah",
+    To:"Dhaka",
     price:150,
     status:"available"
 
 },{
     class:"Economy",
     From:"Dhaka",
-    To:"Rangpur",
-    price:100,
+    To:"Zeddah",
+    price:350,
+    status:"available"
+
+},{
+    class:"Economy",
+    From:"Madina",
+    To:"Makkah",
+    price:200,
     status:"available"
 
 },{
     class:"Economy",
     From:"Dhaka",
-    To:"USA",
-    price:600,
+    To:"Rajshahi",
+    price:80,
     status:"available"
 
 }]
-  // fetch("https://guarded-bastion-73324.herokuapp.com/addSeats",{
-    //     method:"POST",
-    //     headers:{"Content-Type":"application/json"},
-    //     body:JSON.stringify(seats)
-    // }).then(res => res.json()).then(data => console.log(data))
+  fetch("https://guarded-bastion-73324.herokuapp.com/addSeats",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(seats)
+    }).then(res => res.json()).then(data => console.log(data))

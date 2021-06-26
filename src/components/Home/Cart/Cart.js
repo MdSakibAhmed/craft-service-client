@@ -8,7 +8,7 @@ const Cart = ({seat}) => {
     
 
     return (
-        <div className="p-3" style={{border:` 3px solid  ${status === 'booked' ? 'red':'green'}`}} >
+        <div  className="p-3 mt-3" style={{border:` 3px solid  ${status === 'booked' ? 'red':'green'} `, width:"250px"}} >
         <p>FROM: {From}</p>
         <p>To: {To}</p>
         <p>Price: ${price}</p>
