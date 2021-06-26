@@ -4,6 +4,7 @@ import ProcessPayment from '../../OrderProcess/ProcessPayment/ProcessPayment';
 
 const ToBeBookedItem = () => {
     const [seat, setSeat]= useState({})
+    const [successBooking , setSuccessBooking] = useState(false)
     const [ticketAmount,setTicketAmount] = useState(1)
     const {From, To, price,_id, class:category} = seat;
     const {id} = useParams()
@@ -42,6 +43,7 @@ const ToBeBookedItem = () => {
             if(result && result.status !== "already booked"){
                 handleStatus(_id)
                console.log("booked");
+               setSuccessBooking(true)
 
             }
         })
@@ -58,15 +60,22 @@ const ToBeBookedItem = () => {
    
     return (
         <div className="container pt-5">
+        {successBooking &&  <div className="mt-5 text-success">
+        <h1>Booked successfully Thank you</h1>
+
+        </div>}
+       
         <p>FROM: {From}</p>
         <p>To: {To}</p>
-        <p>Price: {price}</p>
-        <p>Select ticket Amount</p>
+        <p>Price: ${price}</p>
+        <p className="bold">Select ticket Amount</p>
         <input onChange={(e) =>  setTicketAmount(e.target.value)} type="number" value={ticketAmount} name="" id="" />
+        <p className="mt-2">Payboll Amount: ${ticketAmount * price}</p>
         {ticketAmount > 5 ? <p>Cant be purchase more than 5 tickets</p>:<div>
             <h6 className="mb-3">Pay with credit card</h6>
               <ProcessPayment
                 handleBook={handleBook}
+               
               ></ProcessPayment>
         </div>}
         

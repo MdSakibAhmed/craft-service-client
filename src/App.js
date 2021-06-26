@@ -7,12 +7,15 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import PrivateRoute from './components/PrivateRoute';
 import ToBeBookedItem from './components/Home/ToBeBookedItem/ToBeBookedItem';
 import Login from './components/Login/Login';
+import Header from './components/Home/Header/Header';
 export const UserContext = createContext()
 function App() {
 const [loggedInUser,setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+   
     <Router>
+    <Header></Header>
 
 <Switch>
 <PrivateRoute path="/buyTicket/:id">

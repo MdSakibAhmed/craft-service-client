@@ -20,6 +20,7 @@ const CheckoutForm =  ({handleBook}) => {
     else{
         console.log('[PaymentMethod]', paymentMethod);
         handleBook()
+
     }
        
     }

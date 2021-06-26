@@ -6,7 +6,7 @@ const stripePromise = loadStripe('pk_test_51IeAvESAxlZBXA7dIcbdEmUXQ1dmZAyV7tJlf
 const ProcessPayment = ({handleBook}) => {
     return (
         <Elements stripe={stripePromise}>
-        <CheckoutForm handleBook={handleBook}></CheckoutForm>
+        <CheckoutForm handleBook={handleBook}  ></CheckoutForm>
 
         </Elements>
     );
